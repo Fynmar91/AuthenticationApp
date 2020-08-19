@@ -88,13 +88,14 @@ router.post("/login", async (req, res) => {
           jwt.sign(payload, key, { expiresIn: 604800 }, (err, token) => {
             res.status(200).json({
               success: true,
+              user: user,
               token: `Bearer ${token}`,
               msg: "Successfully signed in.",
             });
           });
         } else {
           return res.status(404).json({
-            msg: "Wrong password.",
+            msg: "Incorrect password.",
             success: false,
           });
         }
