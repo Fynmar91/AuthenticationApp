@@ -4,7 +4,8 @@
   "description": "Simple web app to handle authentication with vue.js",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
   },
   "author": "Yannik Seitz",
   "license": "MIT",
@@ -16,6 +17,7 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.0",
+    "nodemon": "^2.0.4",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0"
   }
