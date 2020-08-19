@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const path = require("path");
 const cors = require("cors");
+const passport = require("passport");
 
 // Initialize app
 const app = express();
@@ -13,10 +14,11 @@ app.use(
     extended: false,
   })
 );
-
 app.use(bodyParser.json());
-
 app.use(cors());
+app.use(passport.initialize());
+// Bring in Passport Strategy
+require("./config/passport")(passport);
 
 // Setting static directory
 app.use(express.static(path.join(__dirname, "public")));
