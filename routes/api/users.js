@@ -16,7 +16,6 @@ router.post("/register", async (req, res) => {
 
   console.log(req.body);
   if (password !== confirm_password) {
-    console.log(password); // DEBUG
     return res.status(400).json({
       msg: "Passwords do not match.",
     });

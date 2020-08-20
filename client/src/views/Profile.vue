@@ -1,11 +1,11 @@
 <template>
   <div>
     <h2>Profile</h2>
-    <div class="card">
+    <div class="card" v-if="getUser">
       <ul class="list-group">
-        <li class="list-group-item">Name: {{ user.name }}</li>
-        <li class="list-group-item">Username: {{ user.username }}</li>
-        <li class="list-group-item">Email: {{ user.email }}</li>
+        <li class="list-group-item">Name: {{ getUser.name }}</li>
+        <li class="list-group-item">Username: {{ getUser.username }}</li>
+        <li class="list-group-item">Email: {{ getUser.email }}</li>
       </ul>
     </div>
   </div>
@@ -16,7 +16,7 @@ import { mapActions, mapGetters } from "vuex";
 
 export default {
   computed: {
-    ...mapGetters(["user"]),
+    ...mapGetters(["getUser"]),
   },
   methods: {
     ...mapActions(["getProfile"]),
