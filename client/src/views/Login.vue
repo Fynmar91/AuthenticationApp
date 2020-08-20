@@ -59,12 +59,12 @@ export default {
 <style scoped>
 .card {
   width: 60%;
-  border-radius: 0;
+  border-radius: 0px;
 }
 .btn {
-  border-radius: 0;
+  border-radius: 0px;
 }
 .form-control {
-  border-radius: 0;
+  border-radius: 0px;
 }
 </style>
